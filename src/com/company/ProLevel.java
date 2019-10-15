@@ -1,7 +1,7 @@
 package com.company;
 
 // Abstract Class as nobdy should be able to create a generic professional-level camera
-public class ProLevel extends ConsumerLevel {
+public class ProLevel extends ConsumerLevel implements CameraAdvanced {
 
     private int iso;
     private int aperture;
@@ -11,7 +11,7 @@ public class ProLevel extends ConsumerLevel {
      * Default constructor accepts Strings for manufacturer and model
      *
      * @param manufacturer String to set manufacturer
-     * @param model String to set model
+     * @param model        String to set model
      */
     public ProLevel(String manufacturer, String model) {
         super(manufacturer, model);
@@ -70,6 +70,15 @@ public class ProLevel extends ConsumerLevel {
     public void setFocusMode(String focusMode) {
         this.focusMode = focusMode;
     }
+    @Override
+    public void formatSDCard() {
+
+    }
+
+    @Override
+    public void takeVideo() {
+
+    }
 
     @Override
     public String toString() {
@@ -79,4 +88,5 @@ public class ProLevel extends ConsumerLevel {
                 ", focusMode='" + focusMode + '\'' +
                 '}';
     }
+
 }

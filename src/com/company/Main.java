@@ -10,6 +10,13 @@ public class Main {
         // Create DSLR camera
         DSLR camera1 = new DSLR("Canon", "EOS");
 
+        // Test inheritance from CameraAdvanced and CameraBasic interfaces
+        camera1.flashSwitch();
+        camera1.formatSDCard();
+        camera1.takeVideo();
+        camera1.zooming();
+        camera1.shutterButton();
+
         // Test Setters
         camera1.setAperture(5);
         camera1.setFocusMode("Manual");
@@ -27,6 +34,11 @@ public class Main {
 
         // Create Film Camera
         FilmCamera camera2 = new FilmCamera("Kodak", "35mm");
+
+        // Test inheritance from CameraBasic interface
+        camera2.flashSwitch();
+        camera2.zooming();
+        camera2.shutterButton();
 
         // Test Setters
         camera2.setMaxZoom(8);

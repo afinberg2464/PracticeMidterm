@@ -1,7 +1,7 @@
 package com.company;
 
-// Abstract Class as nobdy should be able to create a generic consumer-level camera
-public abstract class ConsumerLevel extends Camera {
+// Abstract Class as nobody should be able to create a generic consumer-level camera
+public abstract class ConsumerLevel extends Camera implements CameraBasic {
 
     private String shootingMode;
 
@@ -31,6 +31,21 @@ public abstract class ConsumerLevel extends Camera {
      */
     public void setShootingMode(String shootingMode) {
         this.shootingMode = shootingMode;
+    }
+
+    @Override
+    public void shutterButton() {
+
+    }
+
+    @Override
+    public void flashSwitch() {
+
+    }
+
+    @Override
+    public void zooming() {
+
     }
 
     @Override
